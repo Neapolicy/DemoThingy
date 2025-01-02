@@ -11,7 +11,7 @@ elif {Response} == "where am I?":
 	OMORI: You're in WHITESPACE
 	jump location
 elif {Response} == "What can I do here?":
-	MC: Uhhhhhhh, I'm not really sure quite frankly.
+	OMORI: Uhhhhhhh, I'm not really sure quite frankly.
 	- You're really helpful, you know that?
 		*OMORI rolls his eyes*
 	- Ugh.

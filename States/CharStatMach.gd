@@ -42,3 +42,6 @@ func _input(event : InputEvent):
 
 func on_state_interrupt_state(newState : State):
 	switch_states(newState)
+
+func interacting():
+	return currentState is Interact

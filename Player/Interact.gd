@@ -1,4 +1,6 @@
 extends State
+
+class_name Interact
 @onready var dialogic_node = $Dialogic
 @export var walk_state : State
 func on_enter():

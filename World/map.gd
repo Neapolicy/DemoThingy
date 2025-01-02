@@ -1,10 +1,11 @@
 extends Node2D
 
 @onready var pauseMenu = $CanvasLayer/Pause
+@onready var player = $Player
 var paused = false
 	
 func _process(delta):
-	if (Input.is_action_just_pressed("pause")):
+	if (Input.is_action_just_pressed("pause") && !player.charStateMachine.interacting()):
 		pause() 
 
 func pause():
