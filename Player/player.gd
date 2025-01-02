@@ -15,7 +15,7 @@ func _process(delta):
 	update_raycast_dir()
 	
 func _physics_process(delta):
-	if charStateMachine.checkStunned():
+	if charStateMachine.checkStunned(): #prevents player from changing the direction that they face
 		direction = Input.get_vector("left", "right", "up", "down")
 	if direction && charStateMachine.checkStunned():
 		velocity.x = direction.x * SPEED

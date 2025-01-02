@@ -1,13 +1,19 @@
-Yo.
-Welcome to WHITESPACE.
+OMORI: Yo.
+OMORI: Welcome to WHITESPACE.
 label location
-You're going to be here for a while, so you better get comfortable.
+OMORI: You're going to be here for a while, so you better get comfortable.
 [text_input var="Response"]
 if {Response} == "...":
-	What?
-	You got a problem?
+	OMORI: What?
+	OMORI: You got a problem?
 	[wait time="1.0" skippable="true"]
 elif {Response} == "where am I?":
+	OMORI: You're in WHITESPACE
 	jump location
-	You're in WHITESPACE
+elif {Response} == "What can I do here?":
+	MC: Uhhhhhhh, I'm not really sure quite frankly.
+	- You're really helpful, you know that?
+		*OMORI rolls his eyes*
+	- Ugh.
+		*OMORI looks at you indifferently*
 [signal arg="end"]
