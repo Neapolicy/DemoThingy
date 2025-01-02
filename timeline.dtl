@@ -1,3 +1,13 @@
-Yo
-Welcome to Whitespace
-You're going to be here for a while, so you better get comfortable
+Yo.
+Welcome to WHITESPACE.
+label location
+You're going to be here for a while, so you better get comfortable.
+[text_input var="Response"]
+if {Response} == "...":
+	What?
+	You got a problem?
+	[wait time="1.0" skippable="true"]
+elif {Response} == "where am I?":
+	jump location
+	You're in WHITESPACE
+[signal arg="end"]

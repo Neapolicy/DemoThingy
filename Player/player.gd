@@ -11,16 +11,12 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _process(delta):
-	if (Input.is_action_just_pressed("interact")):
-		if (detector.is_colliding()):
-			var collided_object = detector.get_collider()
-			if collided_object and collided_object.has_method("interact"):
-				collided_object.interact()  # Call the method if it exists
 	update_animation_parameters()
 	update_raycast_dir()
 	
 func _physics_process(delta):
-	direction = Input.get_vector("left", "right", "up", "down")
+	if charStateMachine.checkStunned():
+		direction = Input.get_vector("left", "right", "up", "down")
 	if direction && charStateMachine.checkStunned():
 		velocity.x = direction.x * SPEED
 		velocity.y = direction.y * SPEED

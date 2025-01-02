@@ -1,5 +1,5 @@
 extends CharacterBody2D
 
 func interact():
-	pass
-	#Dialogic.start("timeline")
+	Dialogic.start("timeline")
+	Dialogic.VAR.Response = "yo yo yo"

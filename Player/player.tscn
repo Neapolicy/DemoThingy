@@ -1,10 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://dxi5ny8sbvc8g"]
+[gd_scene load_steps=33 format=3 uid="uid://dxi5ny8sbvc8g"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_jioa5"]
 [ext_resource type="Texture2D" uid="uid://vrb2650x0x1e" path="res://Sprites/basil.png" id="1_x5oea"]
 [ext_resource type="Script" path="res://States/CharStatMach.gd" id="3_vso7h"]
 [ext_resource type="Script" path="res://Player/Walk.gd" id="4_m54nw"]
 [ext_resource type="Script" path="res://Player/HitState.gd" id="5_lgrwf"]
+[ext_resource type="Script" path="res://Player/Interact.gd" id="6_3lrk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ttgab"]
 
@@ -490,10 +491,16 @@ character = NodePath("..")
 currentState = NodePath("Walk")
 animationTree = NodePath("../AnimationTree")
 
-[node name="Walk" type="Node" parent="CharStateMachine" node_paths=PackedStringArray("jump_state", "attack_state")]
+[node name="Walk" type="Node" parent="CharStateMachine" node_paths=PackedStringArray("jump_state", "attack_state", "interact_state")]
 script = ExtResource("4_m54nw")
 jump_state = NodePath(".")
 attack_state = NodePath(".")
+interact_state = NodePath("../Interact")
 
 [node name="HitState" type="Node" parent="CharStateMachine"]
 script = ExtResource("5_lgrwf")
+
+[node name="Interact" type="Node" parent="CharStateMachine" node_paths=PackedStringArray("walk_state")]
+script = ExtResource("6_3lrk7")
+walk_state = NodePath("../Walk")
+canMove = false
