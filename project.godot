@@ -29,7 +29,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "door_open": "res://npcs/door/door_open.dtl",
-"timeline": "res://timeline.dtl"
+"timeline": "res://npcs/timeline.dtl"
 }
 variables={
 "Response": "yo yo yo!"

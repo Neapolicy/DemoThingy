@@ -2,18 +2,18 @@ OMORI: Yo.
 OMORI: Welcome to WHITESPACE.
 label location
 OMORI: You're going to be here for a while, so you better get comfortable.
-[text_input var="Response"]
-if {Response} == "...":
-	OMORI: What?
-	OMORI: You got a problem?
-	[wait time="1.0" skippable="true"]
-elif {Response} == "where am I?":
+- Where am I?
 	OMORI: You're in WHITESPACE
-	jump location
-elif {Response} == "What can I do here?":
+	[wait time="1.0" skippable="true"]
+- What can I do here?
 	OMORI: Uhhhhhhh, I'm not really sure quite frankly.
 	- You're really helpful, you know that?
 		*OMORI rolls his eyes*
 	- Ugh.
 		*OMORI looks at you indifferently*
+	[wait time="1.0" skippable="true"]
+- ...
+	OMORI: What?
+	OMORI: You got a problem?
+	[wait time="1.0" skippable="true"]
 [signal arg="end"]
