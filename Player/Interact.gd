@@ -14,3 +14,4 @@ func on_enter():
 func _on_logic_signal(argument : String):
 	if argument == "end":
 		nextState = walk_state
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
