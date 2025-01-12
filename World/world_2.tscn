@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://ccrf2qry4brhb"]
+[gd_scene load_steps=3 format=3 uid="uid://ccrf2qry4brhb"]
+
+[ext_resource type="Texture2D" uid="uid://dypwf6kvk10x8" path="res://Sprites/whitespace.png" id="1_3ak12"]
+[ext_resource type="Script" path="res://World/map.gd" id="1_c71o8"]
 
 [node name="World2" type="Node2D"]
+script = ExtResource("1_c71o8")
+
+[node name="Whitespace" type="Sprite2D" parent="."]
+position = Vector2(555, 294)
+texture = ExtResource("1_3ak12")

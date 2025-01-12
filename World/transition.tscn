@@ -43,7 +43,7 @@ script = ExtResource("1_e8w4n")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
-modulate = Color(1, 1, 1, 0.461177)
+modulate = Color(1, 1, 1, 0.6)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

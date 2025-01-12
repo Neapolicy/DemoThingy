@@ -7,18 +7,11 @@
 shader = ExtResource("2_88qu0")
 shader_parameter/amount = 2.079
 
-[node name="Pause" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Pause" type="CanvasLayer"]
 script = ExtResource("1_4kcsa")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_lfwa3")
-layout_mode = 0
 offset_left = -910.0
 offset_top = -442.0
 offset_right = 621.0
@@ -26,7 +19,6 @@ offset_bottom = 337.0
 scale = Vector2(2, 2)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.33
 anchor_right = 0.398
@@ -43,9 +35,14 @@ alignment = 1
 layout_mode = 2
 text = "Resume"
 
+[node name="Return" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Return to menu"
+
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_button_2_pressed"]

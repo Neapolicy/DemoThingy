@@ -504,3 +504,11 @@ script = ExtResource("5_lgrwf")
 script = ExtResource("6_3lrk7")
 walk_state = NodePath("../Walk")
 canMove = false
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.5, 2.5)

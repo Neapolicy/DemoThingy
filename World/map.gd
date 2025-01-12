@@ -1,8 +1,15 @@
 extends Node2D
 
-@onready var pauseMenu = $CanvasLayer/Pause
-@onready var player = $Player
+var player
+var pauseMenu
 var paused = false
+
+func _ready():
+	player = preload("res://Player/player.tscn").instantiate()
+	pauseMenu = preload("res://Menus/pause.tscn").instantiate()
+	add_child(player)
+	add_child(pauseMenu)
+	pauseMenu.visible = false
 	
 func _process(delta):
 	if (Input.is_action_just_pressed("pause") && !player.charStateMachine.interacting()):
