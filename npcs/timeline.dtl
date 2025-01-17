@@ -8,7 +8,8 @@ OMORI: You're going to be here for a while, so you better get comfortable.
 - What can I do here?
 	OMORI: Uhhhhhhh, I'm not really sure quite frankly.
 	- You're really helpful, you know that?
-		*OMORI rolls his eyes*
+		[voice path="res://SFX/laugh.mp3" volume="-0.6"]
+		*OMORI laughs*
 	- Ugh.
 		*OMORI looks at you indifferently*
 	[wait time="1.0" skippable="true"]
